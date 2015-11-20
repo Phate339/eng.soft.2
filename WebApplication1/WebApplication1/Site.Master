@@ -1,0 +1,50 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="WebApplication1.SiteMaster" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<title>Architecture</title>
+	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+	
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header"> 
+        <img src="images/log" alt="log" style="height: 282px; width: 530px"  />
+    </div>
+    <div id="left">
+      <div id="logo">
+        <h1>YoguFlam</h1>
+        <p>Sabor do desejo...</p>
+      </div>
+      <div id="nav">
+        <ul>
+          <li class="important"><a href="Default.aspx">Inicio</a></li>
+          <li><a href="About.aspx">Sobre</a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+          <li><a href=""></a></li>
+
+        </ul>
+      </div>
+      
+      
+    </div>
+    <div>
+        <asp:contentplaceholder ID="MainContent" runat="server" />
+    <div class="clear"> </div>
+    <div id="spacer"> </div>
+    <div id="footer">
+      <div id="copyright">
+        Copyright &copy; 2015 Bruno Ramos All right reserved.
+      </div>
+	  <div id="footerline"></div>
+    </div>
+	
+  </div>
+</body>
+</html>
+
