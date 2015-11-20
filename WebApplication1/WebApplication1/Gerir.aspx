@@ -22,11 +22,8 @@
             <AlternatingRowStyle BackColor="PaleGoldenrod" />
             <Columns>
                 <asp:CommandField ButtonType="Button" SelectText="&gt;" ShowSelectButton="True"  />
-                <asp:BoundField DataField="IDCliente" HeaderText="IDCliente" ReadOnly="True" SortExpression="IDCliente" />
                 <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />
                 <asp:BoundField DataField="Contacto" HeaderText="Contacto" SortExpression="Contacto" />
-                <asp:BoundField DataField="Morada" HeaderText="Morada" SortExpression="Morada" />
-                <asp:BoundField DataField="CC" HeaderText="CC" SortExpression="CC" />
                 <asp:BoundField DataField="Email" HeaderText="Email" SortExpression="Email" />
             </Columns>
             <EmptyDataTemplate>
@@ -295,6 +292,94 @@
         <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
         <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
     </asp:FormView>
+        <br />
+        <br />
+        <asp:Panel ID="Panel1" runat="server">
+            <asp:FormView ID="FormView3" runat="server" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="IDCliente" DataSourceID="SqlDataSource4" ForeColor="Black">
+                <EditItemTemplate>
+                    IDCliente:
+                    <asp:Label ID="IDClienteLabel1" runat="server" Text='<%# Eval("IDCliente") %>' />
+                    <br />
+                    Nome:
+                    <asp:TextBox ID="NomeTextBox" runat="server" Text='<%# Bind("Nome") %>' />
+                    <br />
+                    Contacto:
+                    <asp:TextBox ID="ContactoTextBox" runat="server" Text='<%# Bind("Contacto") %>' />
+                    <br />
+                    Morada:
+                    <asp:TextBox ID="MoradaTextBox" runat="server" Text='<%# Bind("Morada") %>' />
+                    <br />
+                    CC:
+                    <asp:TextBox ID="CCTextBox" runat="server" Text='<%# Bind("CC") %>' />
+                    <br />
+                    Email:
+                    <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' />
+                    <br />
+                    Estado:
+                    <asp:CheckBox ID="EstadoCheckBox" runat="server" Checked='<%# Bind("Estado") %>' />
+                    <br />
+                    <asp:LinkButton ID="UpdateButton" runat="server" CausesValidation="True" CommandName="Update" Text="Update" />
+                    &nbsp;<asp:LinkButton ID="UpdateCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                </EditItemTemplate>
+                <EditRowStyle BackColor="DarkSlateBlue" ForeColor="GhostWhite" />
+                <FooterStyle BackColor="Tan" />
+                <HeaderStyle BackColor="Tan" Font-Bold="True" />
+                <InsertItemTemplate>
+                    IDCliente:
+                    <asp:TextBox ID="IDClienteTextBox" runat="server" Text='<%# Bind("IDCliente") %>' />
+                    <br />
+                    Nome:
+                    <asp:TextBox ID="NomeTextBox" runat="server" Text='<%# Bind("Nome") %>' />
+                    <br />
+                    Contacto:
+                    <asp:TextBox ID="ContactoTextBox" runat="server" Text='<%# Bind("Contacto") %>' />
+                    <br />
+                    Morada:
+                    <asp:TextBox ID="MoradaTextBox" runat="server" Text='<%# Bind("Morada") %>' />
+                    <br />
+                    CC:
+                    <asp:TextBox ID="CCTextBox" runat="server" Text='<%# Bind("CC") %>' />
+                    <br />
+                    Email:
+                    <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' />
+                    <br />
+                    Estado:
+                    <asp:CheckBox ID="EstadoCheckBox" runat="server" Checked='<%# Bind("Estado") %>' />
+                    <br />
+                    <asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Insert" />
+                    &nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancel" />
+                </InsertItemTemplate>
+                <ItemTemplate>
+                    IDCliente:
+                    <asp:Label ID="IDClienteLabel" runat="server" Text='<%# Eval("IDCliente") %>' />
+                    <br />
+                    Nome:
+                    <asp:Label ID="NomeLabel" runat="server" Text='<%# Bind("Nome") %>' />
+                    <br />
+                    Contacto:
+                    <asp:Label ID="ContactoLabel" runat="server" Text='<%# Bind("Contacto") %>' />
+                    <br />
+                    Morada:
+                    <asp:Label ID="MoradaLabel" runat="server" Text='<%# Bind("Morada") %>' />
+                    <br />
+                    CC:
+                    <asp:Label ID="CCLabel" runat="server" Text='<%# Bind("CC") %>' />
+                    <br />
+                    Email:
+                    <asp:Label ID="EmailLabel" runat="server" Text='<%# Bind("Email") %>' />
+                    <br />
+                    Estado:
+                    <asp:CheckBox ID="EstadoCheckBox" runat="server" Checked='<%# Bind("Estado") %>' Enabled="false" />
+                    <br />
+                </ItemTemplate>
+                <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
+            </asp:FormView>
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:yoguflameConnectionString %>" SelectCommand="SELECT [IDCliente], [Nome], [Contacto], [Morada], [CC], [Email], [Estado] FROM [Cliente] WHERE ([IDCliente] = @IDCliente)">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="GridView1" Name="IDCliente" PropertyName="SelectedValue" Type="Int32" />
+                </SelectParameters>
+            </asp:SqlDataSource>
+        </asp:Panel>
     </div>
     </form>
 </asp:Content>
