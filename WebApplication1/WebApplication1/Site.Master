@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
-	<title>Architecture</title>
+	<title>YoguFlame</title>
 	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
 	
 </head>
@@ -12,7 +12,7 @@
 <body>
   <div id="wrapper">
     <div id="header"> 
-        <img src="images/log" alt="log" style="height: 282px; width: 530px"  />
+        <img src="images/yogurt.jpg" alt="log" style="height: 282px; width: 500px"  />
     </div>
     <div id="left">
       <div id="logo">
@@ -21,12 +21,10 @@
       </div>
       <div id="nav">
         <ul>
-          <li class="important"><a href="Default.aspx">Inicio</a></li>
+          <li><a href="Default.aspx">Inicio</a></li>
           <li><a href="About.aspx">Sobre</a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
-          <li><a href=""></a></li>
+          <li><a href="Gerir.aspx">Gerir</a></li>
+          
 
         </ul>
       </div>

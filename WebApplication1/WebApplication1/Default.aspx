@@ -2,30 +2,16 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <div id="right">
-      <h2>Welcome to Our Site!</h2>
+      <h2>Bem vindos ao nosso site!</h2>
       <div id="welcome">
-        <img src="images/pic_1.jpg" width="171" height="137" alt="Pic 1" class="left" />
-        <p>Don't forget to check <a href="">free website templates</a> every day, because we add  a new free website template almost daily.</p><p>You can remove any link to our websites from this template you're free to use the template without linking back to us.</p>
-        <p>This is just a place holder so you can see how the site would look like.</p>
-        <p class="more"><a href="">more</a></p>
+        
+    <p>O iogurte é uma forma de leite em que o açúcar (a lactose) foi transformado em ácido láctico, por fermentação bacteriana.</p>
+
       </div>
-      <h3>Company Profile</h3>
-      <div id="profile">
-        <div id="corp">
-          <div id="corp-img">
-            Corporate Building
-          </div>
-          <p>If you're having problems editing the template please don't hesitate to ask for help on <a href="http://www.freewebsitetemplates.com/forum/">the forum</a>.</p>
-        </div>
-        <div id="indu">
-          <div id="indu-img">
-            Industrial
-          </div>
-          <p>This is a template designed by free website templates for you for free you can replace all the text by your own   			text.</p>
-        </div>
-        <div class="clear"> </div>
-        <p class="more"><a href="">View Details</a></p>
-      </div>
+<div>
+    <p>O iogurte além de poder aumentar a longevidade, possui outras benéficas propriedades nutricionais, graças aos fermentos lácteos, como o Lactobacillus bulgaricus e o Streptococcus thermophilus, aos quais se juntam o leite, depois de homogeneizado e pasteurizado. Devido ao facto de ser obtido mediante fermentação láctea, o iogurte é muito fácil de digerir, o que o torna o produto ideal para pessoas com problemas gastrointestinais.</p>
 
 </div>
+        
+     
 </asp:Content>

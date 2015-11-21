@@ -14,11 +14,11 @@
                         </td>
                     </tr>
                 </table>
-                <asp:Button ID="ButtonSearch" runat="server" Text="Pesquisar" Width="5em" />
+                <asp:Button ID="ButtonSearch" runat="server" Text="Pesquisar" Width="5em" OnClick="ButtonSearch_Click" />
                 &nbsp;<asp:Button ID="ButtonClearSearch" runat="server" OnClick="ButtonClearSearch_Click" Text="Apagar" Width="5em" />
             </div>
         </asp:Panel>
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="IDCliente" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="None" Width="827px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False" BackColor="LightGoldenrodYellow" BorderColor="Tan" BorderWidth="1px" CellPadding="2" DataKeyNames="IDCliente" DataSourceID="SqlDataSource1" ForeColor="Black" GridLines="None" Width="732px" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" style="margin-top: 22px">
             <AlternatingRowStyle BackColor="PaleGoldenrod" />
             <Columns>
                 <asp:CommandField ButtonType="Button" SelectText="&gt;" ShowSelectButton="True"  />
@@ -38,7 +38,7 @@
             <SortedDescendingCellStyle BackColor="#E1DB9C" />
             <SortedDescendingHeaderStyle BackColor="#C2A47B" />
         </asp:GridView>
-        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\Luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
             <DeleteParameters>
                 <asp:Parameter Name="original_IDCliente" Type="Int32" />
                 <asp:Parameter Name="original_Nome" Type="String" />
@@ -153,7 +153,7 @@
             <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
             <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
         </asp:FormView>
-        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
+        <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\Luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" OldValuesParameterFormatString="original_{0}" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
             <SelectParameters>
                 <asp:ControlParameter ControlID="GridView1" PropertyName="SelectedValue" Name="IDCliente"/>
             </SelectParameters>
@@ -162,7 +162,7 @@
         <asp:Button ID="btConfirmaEliminar" runat="server" OnClick="btConfirmaEliminar_Click" Text="Sim! eliminar" Width="9em" />
         <asp:Button ID="btCancelaEliminar" runat="server" OnClick="btCancelaEliminar_Click" Text="Não, cancelar" Width="9em" />
     </asp:Panel>
-    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
+    <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\Luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" OldValuesParameterFormatString="original_{0}" SelectCommand="SELECT * FROM [Cliente] WHERE Estado = 0" ConflictDetection="CompareAllValues" DeleteCommand="DELETE FROM [Cliente] WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email" InsertCommand="INSERT INTO [Cliente] ([IDCliente], [Nome], [Contacto], [Morada], [CC], [Email]) VALUES (@IDCliente, @Nome, @Contacto, @Morada, @CC, @Email)" UpdateCommand="UPDATE [Cliente] SET [Nome] = @Nome, [Contacto] = @Contacto, [Morada] = @Morada, [CC] = @CC, [Email] = @Email WHERE [IDCliente] = @original_IDCliente AND [Nome] = @original_Nome AND [Contacto] = @original_Contacto AND [Morada] = @original_Morada AND [CC] = @original_CC AND [Email] = @original_Email">
         <DeleteParameters>
             <asp:Parameter Name="original_IDCliente" Type="Int32" />
             <asp:Parameter Name="original_Nome" Type="String" />
@@ -197,7 +197,7 @@
             <asp:Parameter Name="original_Email" Type="String" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="IDCliente" DataSourceID="SqlDataSource2" ForeColor="#333333" OnItemDeleted="FormView1_ItemDeleted" OnItemInserted="FormView1_ItemInserted" OnItemInserting="FormView1_ItemInserting" OnItemUpdated="FormView1_ItemUpdated" OnItemUpdating="FormView1_ItemUpdating" OnModeChanged="FormView1_ModeChanged" Visible="False" Width="100%">
+    <asp:FormView ID="FormView1" runat="server" AllowPaging="True" CellPadding="4" DataKeyNames="IDCliente" DataSourceID="SqlDataSource2" ForeColor="#333333" OnItemDeleted="FormView1_ItemDeleted" OnItemInserted="FormView1_ItemInserted" OnItemInserting="FormView1_ItemInserting" OnItemUpdated="FormView1_ItemUpdated" OnItemUpdating="FormView1_ItemUpdating" OnModeChanged="FormView1_ModeChanged" Visible="False" Width="135%">
         <EditItemTemplate>
             IDCliente:
             <asp:Label ID="IDClienteLabel1" runat="server" Text='<%# Eval("IDCliente") %>' />
@@ -238,33 +238,37 @@
             <br />
             Nome:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="NomeTextBox" runat="server" Text='<%# Bind("Nome") %>' Width="297px" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NomeTextBox" Display="Dynamic" ErrorMessage="Insira um nome" SetFocusOnError="True" ToolTip="Só Usar Letras">*</asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="NomeTextBox" Display="Dynamic" ErrorMessage="Por favor introduza o nome."  ForeColor="Red" SetFocusOnError="True" ToolTip="Introduza o nome">*</asp:RequiredFieldValidator>
             <br />
             <br />
             Contacto:&nbsp;
             <asp:TextBox ID="ContactoTextBox" runat="server" Text='<%# Bind("Contacto") %>' />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ContactoTextBox" Display="Dynamic" ErrorMessage="Insira um contacto" SetFocusOnError="True" ToolTip="Só Usar Numeros"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ContactoTextBox" Display="Dynamic" ErrorMessage="Introduza o contacto" ForeColor="Red" SetFocusOnError="True" ToolTip="Introduza o contacto">*</asp:RequiredFieldValidator>
+            
+            <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToValidate="ContactoTextBox" ErrorMessage="Introduza apenas numeros" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
             <br />
             <br />
             Morada:&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="MoradaTextBox" runat="server" Text='<%# Bind("Morada") %>' Width="349px" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="MoradaTextBox" Display="Dynamic" ErrorMessage="Insira uma Morada" SetFocusOnError="True" ToolTip="Só Usar Letras"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="ContactoTextBox" Display="Dynamic" ErrorMessage="Introduza a morada" ForeColor="Red" SetFocusOnError="True" ToolTip="Introduza a morada">*</asp:RequiredFieldValidator>
             <br />
             <br />
             CC:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="CCTextBox" runat="server" Text='<%# Bind("CC") %>' />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CCTextBox" Display="Dynamic" ErrorMessage="Por favor so usar letra" SetFocusOnError="True" ToolTip="Só Usar Letras"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="CCTextBox" Display="Dynamic" ErrorMessage="Introduza o CC" ForeColor="Red" SetFocusOnError="True" ToolTip="Introduza o CC">*</asp:RequiredFieldValidator>
+            <asp:CompareValidator ID="CompareValidator2" runat="server" ControlToValidate="CCTextBox" ErrorMessage="Introduza apenas numeros" Operator="DataTypeCheck" Type="Integer"></asp:CompareValidator>
+            
             <br />
             <br />
             Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:TextBox ID="EmailTextBox" runat="server" Text='<%# Bind("Email") %>' Width="199px" />
-            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="NomeTextBox" Display="Dynamic" ErrorMessage="Por favor so usar letra" SetFocusOnError="True" ToolTip="Só Usar Letras"></asp:RequiredFieldValidator>
+            <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ControlToValidate="EmailTextBox" Display="Dynamic" ErrorMessage="Introduza o email" ForeColor="Red" SetFocusOnError="True" ToolTip="Introduza o email">*</asp:RequiredFieldValidator>
             <br />
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Inserir" />
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="InsertButton" runat="server" CausesValidation="True" CommandName="Insert" Text="Inserir" />
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<asp:LinkButton ID="InsertCancelButton" runat="server" CausesValidation="False" CommandName="Cancel" Text="Cancelar" />
             <br />
             <br />
-            <asp:ValidationSummary ID="ValidationSummary1" runat="server" />
+            <asp:ValidationSummary ID="ValidationSummary1" runat="server" style="margin-left: 16px" />
         </InsertItemTemplate>
         <ItemTemplate>
             IDCliente:
@@ -374,7 +378,7 @@
                 </ItemTemplate>
                 <PagerStyle BackColor="PaleGoldenrod" ForeColor="DarkSlateBlue" HorizontalAlign="Center" />
             </asp:FormView>
-            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="<%$ ConnectionStrings:yoguflameConnectionString %>" SelectCommand="SELECT [IDCliente], [Nome], [Contacto], [Morada], [CC], [Email], [Estado] FROM [Cliente] WHERE ([IDCliente] = @IDCliente)">
+            <asp:SqlDataSource ID="SqlDataSource4" runat="server" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=&quot;C:\Users\Luis_\Desktop\New folder\WebApplication1\App_Data\yoguflame.mdf&quot;;Integrated Security=True;Connect Timeout=30" SelectCommand="SELECT [IDCliente], [Nome], [Contacto], [Morada], [CC], [Email], [Estado] FROM [Cliente] WHERE ([IDCliente] = @IDCliente)">
                 <SelectParameters>
                     <asp:ControlParameter ControlID="GridView1" Name="IDCliente" PropertyName="SelectedValue" Type="Int32" />
                 </SelectParameters>
